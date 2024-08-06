@@ -13,5 +13,6 @@ versions=$(
     sort_versions |
     xargs
 )
+versions+=("1.40.1-fastcomp")
 
 echo "$versions"

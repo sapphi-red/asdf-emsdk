@@ -5,6 +5,10 @@ install_emsdk() {
     local version=$2
     local install_path=$3
 
+    if [ "$version" = "1.40.1-fastcomp" ]; then
+      "${install_path}/emsdk" install 1.40.1
+    fi
+
     "${install_path}/emsdk" install "${version}"
     "${install_path}/emsdk" activate "${version}"
     source "${install_path}/emsdk_env.sh"

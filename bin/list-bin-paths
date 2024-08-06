@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-echo ". upstream/emscripten"
+if [ "$ASDF_INSTALL_VERSION" = "1.40.1-fastcomp" ]; then
+  echo ". fastcomp/emscripten"
+else
+  echo ". upstream/emscripten"
+fi
